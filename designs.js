@@ -8,6 +8,7 @@
 function makeGrid() {
   $("#submit").click(function(event) {
     event.preventDefault()
+    $("#pixel_canvas").empty();
     let height = $("#input_height").val();
     let width = $("#input_width").val();
     $("#input_height").val(height);
