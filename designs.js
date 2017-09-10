@@ -3,8 +3,6 @@
 
 // When size is submitted by the user, call makeGrid()
 
-
-
 function makeGrid() {
   $("#submit").click(function(event) {
     event.preventDefault()
@@ -13,29 +11,18 @@ function makeGrid() {
     let width = $("#input_width").val();
     $("#input_height").val(height);
     $("#input_width").val(width);
-    console.log(height);
     for (let h = 0; h < height; h++){
       $("#pixel_canvas").append("<tr></tr>")
-    }
+    };
     for (let w = 0; w < width; w++){
       $("tr").append( `<td id=${w}></td>`)
-    }
-
-  })
-
+    };
+  });
   //add color
   $("#pixel_canvas").on("click", "td", function(){
     let color = $("#colorPicker").val();
-    console.log(color)
     $(this).css("background-color", color);
-  })
-
-
-
-
-//
-
-// Your code goes here!
+  });
 
 }
 
